@@ -12,6 +12,15 @@ export class BindingsComponent implements OnInit {
   colspan =2 ;
   isActive= true;
   userEmail = "me.@example.com";
+
+  course = {
+    title : "The complete Angular course",
+    rating : 4.9745,
+    students: 30123,
+    price : 19095,
+    releaseDate : new Date(2016,3,1)
+  }
+
   constructor() { }
 
 
