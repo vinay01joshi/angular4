@@ -21,6 +21,16 @@ export class BindingsComponent implements OnInit {
     console.log('Button was clicked !' , $event);
   }
 
+  onKeyup($event){
+    if($event.keyCode === 13){
+      console.log("Enter was pressed");
+    }
+  }
+
+  onKeyupNew(){    
+      console.log("Angular 4 Enter was pressed");    
+  }
+
   onDivClicked(){
     console.log('Div was clicked');
   }

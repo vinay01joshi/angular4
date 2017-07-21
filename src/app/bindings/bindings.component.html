@@ -14,6 +14,9 @@
   </tr>
 </table>
 
+<input (keyup)="onKeyup($event)"> <!-- property old way envent filter  --> 
+<input (keyup.enter)="onKeyupNew()"> <!-- property binding  angular way event filter -->
+
 <div (click)="onDivClicked()">
   <button 
   class="btn btn-primary" 
