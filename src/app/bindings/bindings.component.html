@@ -13,7 +13,13 @@
     <td [attr.colspan]="colspan"></td>
   </tr>
 </table>
-<button 
+
+<div (click)="onDivClicked()">
+  <button 
   class="btn btn-primary" 
   [class.active]="isActive"
-  [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+  [style.backgroundColor]="isActive ? 'blue' : 'white'"
+  (click)="onSave($event)"
+  >Save</button>
+</div>
+

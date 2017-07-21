@@ -16,4 +16,13 @@ export class BindingsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSave($event){
+    $event.stopPropagation();
+    console.log('Button was clicked !' , $event);
+  }
+
+  onDivClicked(){
+    console.log('Div was clicked');
+  }
+
 }
