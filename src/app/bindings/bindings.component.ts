@@ -22,7 +22,7 @@ export class BindingsComponent implements OnInit {
   }
 
   text=" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book";
-
+  isFavorite = false;
   constructor() { }
 
 
@@ -53,6 +53,10 @@ export class BindingsComponent implements OnInit {
 
   onDivClicked(){
     console.log('Div was clicked');
+  }
+
+  isFavoriteChange($event){
+    console.log($event);
   }
 
 }

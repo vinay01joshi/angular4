@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from "./courses.component";
 import { AuthorComponent } from './author/author.component';
 import { BindingsComponent } from './bindings/bindings.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { BindingsComponent } from './bindings/bindings.component';
     CoursesComponent,
     AuthorComponent,
     BindingsComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

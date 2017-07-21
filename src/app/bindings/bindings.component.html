@@ -39,3 +39,7 @@
   {{course.releaseDate | date:'shortDate'}} <br/>
   {{text | summary:10 }}
 </div>
+
+<div>
+  <favorite [is-favorite]="isFavorite" (chnage)="isFavoriteChange($event)"></favorite>
+</div>
