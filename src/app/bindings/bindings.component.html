@@ -13,4 +13,7 @@
     <td [attr.colspan]="colspan"></td>
   </tr>
 </table>
-<button class="btn btn-primary" [class.active]="isActive">Save</button>
+<button 
+  class="btn btn-primary" 
+  [class.active]="isActive"
+  [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
