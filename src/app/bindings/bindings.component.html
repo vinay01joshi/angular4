@@ -1,0 +1,15 @@
+<h1>Bindings Examples !</h1>
+<h2>{{ title }}</h2>
+
+<!-- tring interpolation || works for both way (dom to component and component to dom) -->
+<img src="{{ imageUrl}}" alt="...">
+
+<!-- property binding  || works only one way  (component to dom) --> 
+<img [src]="imageUrl" alt=""> 
+
+
+<table>
+  <tr>
+    <td [attr.colspan]="colspan"></td>
+  </tr>
+</table>

@@ -6,12 +6,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from "./courses.component";
 import { AuthorComponent } from './author/author.component';
+import { BindingsComponent } from './bindings/bindings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    AuthorComponent
+    AuthorComponent,
+    BindingsComponent
   ],
   imports: [
     BrowserModule
