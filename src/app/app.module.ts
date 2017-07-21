@@ -1,3 +1,4 @@
+import { SummaryPipe } from './shared/summary.pipe';
 import { AuthorService } from './author/author.service';
 import { CoursesService } from './courses.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,8 @@ import { BindingsComponent } from './bindings/bindings.component';
     AppComponent,
     CoursesComponent,
     AuthorComponent,
-    BindingsComponent
+    BindingsComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
