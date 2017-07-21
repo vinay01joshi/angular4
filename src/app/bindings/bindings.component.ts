@@ -10,6 +10,7 @@ export class BindingsComponent implements OnInit {
   title = "List of Courses";
   imageUrl = "http://lorempixel.com/400/200";
   colspan =2 ;
+  isActive= true;
   constructor() { }
 
   ngOnInit() {
