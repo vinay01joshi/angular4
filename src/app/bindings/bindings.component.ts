@@ -11,7 +11,9 @@ export class BindingsComponent implements OnInit {
   imageUrl = "http://lorempixel.com/400/200";
   colspan =2 ;
   isActive= true;
+  userEmail = "me.@example.com";
   constructor() { }
+
 
   ngOnInit() {
   }
@@ -32,6 +34,10 @@ export class BindingsComponent implements OnInit {
   }
   onKeyupNew1(email){    
       console.log(email);    
+  }
+
+  onKeyupNew2(){    
+      console.log(this.userEmail);    
   }
 
   onDivClicked(){

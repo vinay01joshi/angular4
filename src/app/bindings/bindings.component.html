@@ -18,6 +18,8 @@
 <input (keyup.enter)="onKeyupNew($event)"> <!-- property binding  angular way event filter -->
 <input #email (keyup.enter)="onKeyupNew1(email.value)"> <!--  template variable -->
 
+<input [(ngModel)]="userEmail" (keyup.enter)="onKeyupNew2()"> <!--  two way binding -->
+
 
 <div (click)="onDivClicked()">
   <button 
