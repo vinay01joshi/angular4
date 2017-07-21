@@ -15,7 +15,9 @@
 </table>
 
 <input (keyup)="onKeyup($event)"> <!-- property old way envent filter  --> 
-<input (keyup.enter)="onKeyupNew()"> <!-- property binding  angular way event filter -->
+<input (keyup.enter)="onKeyupNew($event)"> <!-- property binding  angular way event filter -->
+<input #email (keyup.enter)="onKeyupNew1(email.value)"> <!--  template variable -->
+
 
 <div (click)="onDivClicked()">
   <button 

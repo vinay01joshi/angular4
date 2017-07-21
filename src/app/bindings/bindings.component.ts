@@ -27,8 +27,11 @@ export class BindingsComponent implements OnInit {
     }
   }
 
-  onKeyupNew(){    
-      console.log("Angular 4 Enter was pressed");    
+  onKeyupNew($event){    
+      console.log($event.target.value);    
+  }
+  onKeyupNew1(email){    
+      console.log(email);    
   }
 
   onDivClicked(){
