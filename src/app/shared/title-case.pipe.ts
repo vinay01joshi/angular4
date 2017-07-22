@@ -14,23 +14,24 @@ export class TitleCasePipe implements PipeTransform {
     
 
     for(var i = 0 ; i < words.length ; i++){
-      let word = words[i];
+      let  word = words[i];
        if(i >0 && this.isPreposition(word))
-          word = word.toLowerCase();
+          words[i] = word.toLowerCase();
        else
-         word = this.toTitleCase(word);       
+         words[i] = this.toTitleCase(word);       
     }
 
     return words.join(' ');
     
   }
 
-  private isPreposition(word : string):boolean {
+  private isPreposition(word : string): boolean {
     let prepositions = [
       'of',
       'and',
       'the'
     ];
+
     return prepositions.includes(word.toLowerCase());
   }
 
