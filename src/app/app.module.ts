@@ -12,6 +12,7 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { TitleCasePipe } from './shared/title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TitleCasePipe } from './shared/title-case.pipe';
     FavoriteComponent,
     TitleCaseComponent,
     TitleCasePipe,
+    PanelComponent,
   ],
   imports: [
     BrowserModule,
