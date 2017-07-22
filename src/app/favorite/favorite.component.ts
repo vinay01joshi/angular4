@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css']
+  styleUrls: ['./favorite.component.css'],   
+  encapsulation : ViewEncapsulation.Emulated //ViewEncapsulation.Native ( shadow ) //ViewEncapsulation.Non (bleed out side of views)
 })
 export class FavoriteComponent implements OnInit {
 
