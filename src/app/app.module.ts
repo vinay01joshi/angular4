@@ -14,7 +14,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { CoursesComponent } from "./courses/courses.component";
 import { CoursesService } from "./courses/courses.service";
-import { InputFormatDirective } from './input-format.directive';
+import { InputFormatDirective } from "./shared/custom-directives/input-format.directive";
 
 @NgModule({
   declarations: [
