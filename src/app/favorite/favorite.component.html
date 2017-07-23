@@ -15,3 +15,21 @@
   (click)="onClick()"
   >
 </i>
+
+<button
+  [style.backgroundColor]="canSave ? 'blue' : 'red'"
+  [style.color]="canSave ? 'white' : 'black' "
+  [style.fontWeight] = "canSave ? 'bold' : 'normal' "
+  >
+  Save
+</button>
+
+<button
+  [ngStyle]="{
+      'backgroundColor' : canSave ? 'blue' : 'red',
+      'color' :  canSave ? 'white' : 'black',
+      'fontWeight' : canSave ? 'bold' : 'normal'
+  }"
+  >
+  Save style
+</button>
