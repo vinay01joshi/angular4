@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
 })
 export class CoursesComponent {
     title = "List of courses";
-    courses;
+    courses=[];
     computerCourses = [
         { id : 1 , name: 'AspNetCore' },
         { id : 2 , name: 'Angular2' },
@@ -19,7 +19,7 @@ export class CoursesComponent {
     viewMode = "map";
 
     constructor(private _courseService : CoursesService){
-        this.courses = this._courseService.getCourses()
+        // this.courses = this._courseService.getCourses()
     }
 
     onAdd(){
@@ -33,6 +33,14 @@ export class CoursesComponent {
         let index = this.computerCourses.indexOf(computerCourse)
         this.computerCourses.splice(index,1);
 
+    }
+
+    loadCourses(){
+        this.courses =  ["Angular2","AspNetCore","Docker"] ;
+    }
+
+    trackCourse(index,course){
+        course ? course.id : undefined;
     }
 
 }

@@ -45,3 +45,12 @@
     </li>
   </ul>
 </div>
+
+<div>
+  <button (click)="loadCourses()" >Load couress</button>
+  <ul>
+    <li *ngFor="let course of courses; trackBy: trackCourse">
+      {{ course }}
+    </li>
+  </ul>
+</div>
