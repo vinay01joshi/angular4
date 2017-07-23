@@ -22,6 +22,17 @@ export class CoursesComponent {
         this.courses = this._courseService.getCourses()
     }
 
-    
+    onAdd(){
+        this.computerCourses.push({
+            id : 6,
+            name :  'Git work flow'
+        });
+    }
+
+    onRemove(computerCourse){
+        let index = this.computerCourses.indexOf(computerCourse)
+        this.computerCourses.splice(index,1);
+
+    }
 
 }

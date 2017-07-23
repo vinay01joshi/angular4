@@ -34,3 +34,14 @@
     </li>
   </ul>
 </div>
+
+
+<div>
+  <button (click)="onAdd()">Add</button>
+  <ul>
+    <li *ngFor="let computerCourse of computerCourses">
+      {{ computerCourse.name }} 
+      <button (click)="onRemove(computerCourse)">Remove</button>
+    </li>
+  </ul>
+</div>
