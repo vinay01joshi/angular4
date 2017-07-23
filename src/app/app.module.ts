@@ -14,6 +14,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { CoursesComponent } from "./courses/courses.component";
 import { CoursesService } from "./courses/courses.service";
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CoursesService } from "./courses/courses.service";
     TitleCasePipe,
     PanelComponent,
     LikeComponent,
+    InputFormatDirective,
   ],
   imports: [
     BrowserModule,
