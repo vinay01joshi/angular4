@@ -19,3 +19,18 @@
   <div *ngSwitchCase="'list'">List view content</div>
   <div *ngSwitchDefault>otherwise</div>
 </div>
+
+<div>
+  <ul>
+    <li *ngFor="let computerCourse of computerCourses; index as i">
+      {{ i }} - {{ computerCourse.name }}
+    </li>
+  </ul>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let computerCourse of computerCourses; even as isEven">
+      {{ computerCourse.name }} <span *ngIf="isEven">(EVEN)</span>
+    </li>
+  </ul>
+</div>
