@@ -1,6 +1,9 @@
-# HelloWorld
+# Angular 4 Learing and development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+and all the component are also generated through angular cli tool some of command are as follows 
+
+ `user-name/angular4> ng g c component-name `
 
 ## Development server
 
