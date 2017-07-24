@@ -1,13 +1,16 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
-  <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input required minlength="3" maxlength="10" pattern="banana" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-      <div *ngIf="firstName.errors.required">First Name is required</div>
-      <div *ngIf="firstName.errors.minlength">First name should be minimun {{firstName.errors.minlength.requiredLength}} character.</div>
-      <div *ngIf="firstName.errors.maxlength">First name should be maximum 10 character.</div>
-      <div *ngIf="firstName.errors.pattern">First name does't match the pattern.</div>
-
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div *ngIf="contact.touched && !contact.valid">validation errors.</div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input required minlength="3" maxlength="10" pattern="banana" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)"
+        id="firstName" type="text" class="form-control">
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">First name should be minimun {{firstName.errors.minlength.requiredLength}} character.</div>
+        <div *ngIf="firstName.errors.maxlength">First name should be maximum 10 character.</div>
+        <div *ngIf="firstName.errors.pattern">First name does't match the pattern.</div>
+      </div>
     </div>
   </div>
   <div class="form-group">
