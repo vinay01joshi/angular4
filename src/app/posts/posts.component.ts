@@ -35,4 +35,13 @@ export class PostsComponent {
       });
    }
 
+   deletPost(post){
+     this._http.delete(this.url + "/" + post.id)
+      .subscribe(res=>{
+        let index = this.posts.indexOf(post);
+        this.posts.splice(index,1);
+        console.log(res.json());
+      });
+   }
+
 }
