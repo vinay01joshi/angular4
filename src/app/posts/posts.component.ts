@@ -9,11 +9,22 @@ import { Component } from '@angular/core';
 export class PostsComponent {
   posts : any[];
   url = "https://jsonplaceholder.typicode.com/posts";
-  constructor(http: Http) {
-    http.get(this.url)
+  constructor(private _http: Http) {
+    this._http.get(this.url)
       .subscribe(response => {
         this.posts = response.json();
       })
+   }
+
+   createPost(input : HTMLInputElement){
+     let post = {title : input.value};
+     input.value = "";
+     this._http.post(this.url, JSON.stringify(post))
+      .subscribe(res => {
+        post['id'] = res.json().id;
+        this.posts.splice(0,0,post);
+        console.log(res.json())
+      });
    }
 
 }
