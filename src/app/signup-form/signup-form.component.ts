@@ -15,17 +15,19 @@ export class SignupFormComponent {
   constructor(private _authService : AuthService){}
 
   form = new FormGroup({
-      username : new FormControl('',[
-        Validators.required,
-        Validators.minLength(3),
-        UserNameValidator.cannotContainSpace
-      ],UserNameValidator.shouldBeUnique),
-      password : new FormControl('',Validators.required)
+      account : new FormGroup({
+        username : new FormControl('',[
+          Validators.required,
+          Validators.minLength(3),
+          UserNameValidator.cannotContainSpace
+        ],UserNameValidator.shouldBeUnique),
+        password : new FormControl('',Validators.required)
+      })
   });
 
   // its working lika a c# property
   get username(){
-    return this.form.get('username');
+    return this.form.get('account.username');
   }
 
   login(){
