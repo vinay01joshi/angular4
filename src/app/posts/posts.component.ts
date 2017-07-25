@@ -27,4 +27,12 @@ export class PostsComponent {
       });
    }
 
+   updatePost(post){
+    //  this._http.put(this.url,JSON.stringify(post))
+     this._http.patch(this.url + "/" + post.id ,JSON.stringify({isRead : true}))
+      .subscribe(res => {
+        console.log(res.json());
+      });
+   }
+
 }
