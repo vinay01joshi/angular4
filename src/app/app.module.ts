@@ -23,6 +23,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from "./posts/post.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { PostsComponent } from './posts/posts.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [CoursesService,AuthorService],
+  providers: [CoursesService,AuthorService,PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
