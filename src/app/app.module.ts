@@ -3,6 +3,7 @@ import { AuthorService } from './author/author.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
@@ -21,6 +22,7 @@ import { UdemyCourseComponent } from './udemy-course/udemy-course.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +44,13 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     SignupFormComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [CoursesService,AuthorService],
   bootstrap: [AppComponent]
