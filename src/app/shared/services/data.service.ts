@@ -21,6 +21,7 @@ export class DataService {
     }
 
     create(resource){
+        //return Observable.throw(new AppError()); generating error intentionally
         return this._http.post(this.url, JSON.stringify(resource))
             .map(response => response.json())
             .catch(this.handleError);
@@ -33,6 +34,7 @@ export class DataService {
     }
 
     delete(id){
+        //return Observable.throw(new AppError()); // simulate expection
         return  this._http.delete(this.url + "/" + id)
             .map(response => response.json())
             .catch(this.handleError)
