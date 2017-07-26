@@ -19,10 +19,7 @@ export class PostsComponent implements OnInit {
       .subscribe(
         response => {
           this.posts = response.json();
-      },error => {
-          alert('An unexpected error occurred.');
-          console.log(error);
-      })
+      });
   }
    
    createPost(input : HTMLInputElement){
@@ -38,11 +35,7 @@ export class PostsComponent implements OnInit {
           if(error instanceof BadInput){
             // this.form.setErrors(error.originalError);            
           }
-          else{
-            alert('An unexpected error occurred.')
-            console.log(error);
-          }
-            
+          else throw error;             
       });
    }
 
@@ -52,14 +45,11 @@ export class PostsComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res.json());
-      },error => {
-          alert('An unexpected error occurred.')
-          console.log(error);
       });
    }
 
    deletPost(post){
-    this._service.deletePost(345)
+    this._service.deletePost(post.id)
       .subscribe(
         response=>{
           let index = this.posts.indexOf(post);
@@ -68,10 +58,7 @@ export class PostsComponent implements OnInit {
       },(error : AppError) => {
         if(error instanceof NotFoundError)
           alert('This post has laready been deleted');
-        else{
-          alert('An unexpected error occurred.')
-          console.log(error);
-        }          
+        else throw error;
       });
    }
 
