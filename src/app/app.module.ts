@@ -1,4 +1,3 @@
-import { GithubFollowersService } from './github-followers.service';
 import { SummaryPipe } from './shared/summary.pipe';
 import { AuthorService } from './author/author.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +6,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+
+import { GithubFollowersService } from './shared/services/github-followers.service';
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
 import { BindingsComponent } from './bindings/bindings.component';

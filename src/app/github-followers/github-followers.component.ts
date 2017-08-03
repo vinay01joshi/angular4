@@ -1,3 +1,4 @@
+import { GithubFollowersService } from './../shared/services/github-followers.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/combineLatest';
@@ -5,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 
 import { ActivatedRoute } from '@angular/router';
-import { GithubFollowersService } from './../github-followers.service';
+
 
 @Component({
   selector: 'github-followers',
