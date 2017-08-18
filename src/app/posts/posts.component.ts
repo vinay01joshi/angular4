@@ -1,28 +1,17 @@
+import { fade } from './../shared/animations/fade.animations';
 import { BadInput } from './../common/bad-input';
 import { AppError } from './../common/app-error';
 import { PostService } from './post.service';
 import { Component, OnInit } from '@angular/core';
 import { NotFoundError } from "../common/not-found-error";
-import { trigger, state, transition, style, animate } from "@angular/animations";
+
 
 @Component({
   selector: 'posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css'],
   animations:[
-    trigger('fade',[
-
-      state('void',style({opacity:0})),
-
-      // <=> bi-directinal expression
-      // also we can write multple expression in transiction   transition('void => *,*=>void'
-      // transition('void <=> *',[
-      //   animate(2000)
-      // ])
-      transition(':enter, :leave',[  // same thing achvied with aliases
-        animate(2000)
-      ])
-    ])
+    fade
   ]
 })
 export class PostsComponent implements OnInit {
