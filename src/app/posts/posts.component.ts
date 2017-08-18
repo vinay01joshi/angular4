@@ -14,11 +14,12 @@ import { trigger, state, transition, style, animate } from "@angular/animations"
 
       state('void',style({opacity:0})),
 
-      transition('void => *',[
-        animate(2000)
-      ]),
-
-      transition('* => void',[
+      // <=> bi-directinal expression
+      // also we can write multple expression in transiction   transition('void => *,*=>void'
+      // transition('void <=> *',[
+      //   animate(2000)
+      // ])
+      transition(':enter, :leave',[  // same thing achvied with aliases
         animate(2000)
       ])
     ])
