@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
@@ -65,6 +66,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path:'',component: HomeComponent },
       { path:'followers/:id/:username',component: GithubProfileComponent },
