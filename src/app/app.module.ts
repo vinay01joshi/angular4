@@ -1,4 +1,3 @@
-import { GithubFollowersService } from './github-followers.service';
 import { SummaryPipe } from './shared/summary.pipe';
 import { AuthorService } from './author/author.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+import { GithubFollowersService } from './shared/services/github-followers.service';
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
 import { BindingsComponent } from './bindings/bindings.component';
@@ -33,6 +34,7 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GithubProfileComponent,
     HomeComponent,
     NotFoundComponent,
+    ArchiveComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +75,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path:'followers/:id/:username',component: GithubProfileComponent },
       { path:'followers',component: GithubFollowersComponent },
       { path:'posts',component: PostsComponent },
+      { path:'archive/:year/:month',component: ArchiveComponent },
       { path:'**',component: NotFoundComponent },
     ])
   ],
