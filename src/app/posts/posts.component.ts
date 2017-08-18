@@ -1,4 +1,4 @@
-import { fade } from './../shared/animations/fade.animations';
+import { fade, slide } from './../shared/animations/fade.animations';
 import { BadInput } from './../common/bad-input';
 import { AppError } from './../common/app-error';
 import { PostService } from './post.service';
@@ -11,7 +11,7 @@ import { NotFoundError } from "../common/not-found-error";
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css'],
   animations:[
-    fade
+    slide
   ]
 })
 export class PostsComponent implements OnInit {
