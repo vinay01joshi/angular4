@@ -1,9 +1,10 @@
-import { fade, slide } from './../shared/animations/fade.animations';
 import { BadInput } from './../common/bad-input';
 import { AppError } from './../common/app-error';
 import { PostService } from './post.service';
 import { Component, OnInit } from '@angular/core';
 import { NotFoundError } from "../common/not-found-error";
+import { fade, slide, bounceOutLeftAnimcation } from './../shared/animations/fade.animations';
+import { trigger, state, transition, style, animate, keyframes, useAnimation } from "@angular/animations";
 
 
 @Component({
@@ -11,7 +12,18 @@ import { NotFoundError } from "../common/not-found-error";
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css'],
   animations:[
-    slide
+    trigger('todoAnimation',[
+      transition(':enter',[
+        style({opacity:0}),
+        animate(2000)
+      ]),
+      transition(':leave',[
+        style({backgroundColor:'red'}),
+        animate(1000),
+        useAnimation(bounceOutLeftAnimcation)
+      ]
+    ),
+    ])
   ]
 })
 export class PostsComponent implements OnInit {
