@@ -84,4 +84,7 @@ export class PostsComponent implements OnInit {
       });
    }
 
+   animationStarted($event){ console.log($event); }
+   animationDone($event){ console.log($event); }
+
 }
