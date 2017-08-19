@@ -4,7 +4,7 @@ import { PostService } from './post.service';
 import { Component, OnInit } from '@angular/core';
 import { NotFoundError } from "../common/not-found-error";
 import { fade, slide, bounceOutLeftAnimcation, fadeInAnimation } from './../shared/animations/fade.animations';
-import { trigger, state, transition, style, animate, keyframes, useAnimation } from "@angular/animations";
+import { trigger, state, transition, style, animate, keyframes, useAnimation, query } from "@angular/animations";
 
 
 @Component({
@@ -12,6 +12,15 @@ import { trigger, state, transition, style, animate, keyframes, useAnimation } f
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css'],
   animations:[
+    trigger('todosAnimation', [
+      transition(':enter',[
+        query('h1',[
+          style({transform: 'translateY(-20px)'}),
+          animate(1000)
+        ])
+      ])
+    ]),
+
     trigger('todoAnimation',[
       transition(':enter',[
         useAnimation(fadeInAnimation,{

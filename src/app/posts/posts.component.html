@@ -1,15 +1,18 @@
-<input type="text" class="form-control" (keyup.enter)="createPost(title)" #title>
-<ul class="list-group">
-  <li 
-    @todoAnimation 
-    (@todoAnimation.start)="animationStarted($event)"
-    (@todoAnimation.done)="animationDone($event)"
-    class="list-group-item" 
-    *ngFor="let post of posts">
-    <button class="btn btn-success btn-sm" (click)="updatePost(post)">Update</button>
-    <button    
-      class="btn btn-danger btn-sm" 
-      (click)="deletPost(post)">Delete</button>
-    {{  post.title }}
-  </li>
-</ul>
+<div @todosAnimation>
+  <h1>Todos</h1>
+  <input type="text" class="form-control" (keyup.enter)="createPost(title)" #title>
+  <ul class="list-group">
+    <li 
+      @todoAnimation 
+      (@todoAnimation.start)="animationStarted($event)"
+      (@todoAnimation.done)="animationDone($event)"
+      class="list-group-item" 
+      *ngFor="let post of posts">
+      <button class="btn btn-success btn-sm" (click)="updatePost(post)">Update</button>
+      <button    
+        class="btn btn-danger btn-sm" 
+        (click)="deletPost(post)">Delete</button>
+      {{  post.title }}
+    </li>
+  </ul>
+</div>
