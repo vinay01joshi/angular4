@@ -21,7 +21,7 @@ export let slide = trigger('slide',[
 ]);
 
 export let fadeInAnimation = animation([
-    style({opacity: 1}),animate('{{ duration }} {{ easing }}')
+    style({opacity: 0}),animate('{{ duration }} {{ easing }}')
     ],{
     params:{
         duration: '2s',
