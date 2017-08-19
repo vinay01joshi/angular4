@@ -4,7 +4,7 @@ import { PostService } from './post.service';
 import { Component, OnInit } from '@angular/core';
 import { NotFoundError } from "../common/not-found-error";
 import { fade, slide, bounceOutLeftAnimcation, fadeInAnimation } from './../shared/animations/fade.animations';
-import { trigger, state, transition, style, animate, keyframes, useAnimation, query } from "@angular/animations";
+import { trigger, state, transition, style, animate, keyframes, useAnimation, query, animateChild } from "@angular/animations";
 
 
 @Component({
@@ -17,7 +17,8 @@ import { trigger, state, transition, style, animate, keyframes, useAnimation, qu
         query('h1',[
           style({transform: 'translateY(-20px)'}),
           animate(1000)
-        ])
+        ]),
+        query('@todoAnimation',animateChild(),{ optional: true })
       ])
     ]),
 
