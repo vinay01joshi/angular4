@@ -9,12 +9,19 @@ import { trigger, state, transition, style, animate, keyframes, useAnimation, qu
     trigger('expandCollapse',[
       state('collapsed',style({
         height: 0,
-        paddingTop:0,
-        paddingBottom:0,
-        overflow: 'hidden'     
+        paddingTop: 0,
+        paddingBottom: 0,
+        opacity: 0    
       })),
       transition('collapsed => expanded',[
-        animate('300ms ease-out')
+        animate('300ms ease-out',style({
+          height: '*',
+          paddingTop: '*',
+          paddingBottom: '*'
+        })),
+        animate(1000,style({
+          opacity: 1
+        }))
       ]),
       transition('expanded => collapsed',[
         animate('300ms ease-in')
