@@ -74,7 +74,7 @@ import { ArchiveComponent } from './archive/archive.component';
       { path:'',component: HomeComponent },
       { path:'followers/:id/:username',component: GithubProfileComponent },
       { path:'followers',component: GithubFollowersComponent },
-      { path:'posts',component: PostsComponent },
+      { path:'posts',component: PostsComponent },      
       { path:'archive/:year/:month',component: ArchiveComponent },
       { path:'**',component: NotFoundComponent },
     ])
